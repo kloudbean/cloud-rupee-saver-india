@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -15,10 +16,12 @@ const HeroSection = () => {
               India's first cloud cost optimization platform with INR billing and zero lock-in. Save on AWS, Azure, and GCP without sacrificing flexibility.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button className="btn-primary text-lg py-6 px-8 flex items-center">
-                Calculate Your Savings
-                <ArrowRight size={20} className="ml-2" />
-              </Button>
+              <Link to="/getting-started">
+                <Button className="btn-primary text-lg py-6 px-8 flex items-center">
+                  Calculate Your Savings
+                  <ArrowRight size={20} className="ml-2" />
+                </Button>
+              </Link>
               <Button variant="outline" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white text-lg py-6 px-8">
                 Book a Demo
               </Button>

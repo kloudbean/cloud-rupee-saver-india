@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import SavingsCalculator from "@/components/SavingsCalculator";
 import FeatureSection from "@/components/FeatureSection";
 import HowItWorks from "@/components/HowItWorks";
+import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
         <SavingsCalculator />
         <FeatureSection />
         <HowItWorks />
+        <PricingSection />
       </main>
       <Footer />
     </div>

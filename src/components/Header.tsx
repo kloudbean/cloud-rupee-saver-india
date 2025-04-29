@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,9 +11,9 @@ const Header = () => {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-xl md:text-2xl font-bold text-brand-blue">
-            Cloud<span className="text-brand-orange">OptimizeX</span>
-          </h1>
+          <Link to="/" className="text-xl md:text-2xl font-bold text-brand-blue">
+            Kloud<span className="text-brand-orange">OptimizeX</span>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -20,10 +21,10 @@ const Header = () => {
           <NavLinks />
           <div className="flex space-x-3">
             <Button variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white">
-              Sign In
+              <Link to="/login">Sign In</Link>
             </Button>
             <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white">
-              Get Started
+              <Link to="/signup">Get Started</Link>
             </Button>
           </div>
         </nav>
@@ -44,10 +45,10 @@ const Header = () => {
             <NavLinks mobile />
             <div className="flex flex-col space-y-3 pt-4">
               <Button variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white w-full">
-                Sign In
+                <Link to="/login">Sign In</Link>
               </Button>
               <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white w-full">
-                Get Started
+                <Link to="/signup">Get Started</Link>
               </Button>
             </div>
           </div>
@@ -63,10 +64,10 @@ const NavLinks = ({ mobile = false }: { mobile?: boolean }) => {
 
   return (
     <div className={navClass}>
-      <a href="#how-it-works" className={linkClass}>How It Works</a>
-      <a href="#features" className={linkClass}>Features</a>
-      <a href="#pricing" className={linkClass}>Pricing</a>
-      <a href="#contact" className={linkClass}>Contact</a>
+      <Link to="/#how-it-works" className={linkClass}>How It Works</Link>
+      <Link to="/#features" className={linkClass}>Features</Link>
+      <Link to="/#pricing" className={linkClass}>Pricing</Link>
+      <Link to="/#contact" className={linkClass}>Contact</Link>
     </div>
   );
 };
